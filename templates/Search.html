@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Jack Manning & Samuel Baker">
+    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+
+    <title>UEA Search</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+ 
+    <link rel="stylesheet" href="static/stylesheet.css">
+ </head>
+ 
+ 
+  
+
+  <body>
+    <nav class="navbar navbar-lg navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="/">
+            UEA PORTAL <svg width="17px" height="17px" viewBox="0 0 17 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title>Fill 28</title><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><path d="M8.18752582,16.9130829 C8.11309376,10.2758407 6.62023957,8.84824988 0,8.78355118 L0,8.12812526 C6.62023957,8.06202008 8.11309376,6.63864877 8.18752582,-5.68434189e-14 L8.81247418,-5.68434189e-14 C8.88831062,6.63864877 10.3797604,8.0563941 17,8.12249929 L17,8.78355118 C10.3797604,8.84824988 8.88831062,10.2758407 8.81247418,16.9130829 L8.18752582,16.9130829" id="Fill-28" fill="#00AEF0"></path></g></svg>
+        </a>
+
+
+        <!--- Search bar --->
+        <div class="collapse searchToggler-collapse" id="searchBar">
+            <form class="form-inline my-2 my-lg-0" action="search">
+                <i class="fas fa-search" aria-hidden="true"></i>
+                <input class="form-control form-control-sm ml-3" type="text" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-light my-2 my-sm-0 " type="submit" >Search</button>
+            </form>
+        </div>
+        
+        <!--- Search and Navbar Toggles -->
+        <div>
+            <button class="searchToggler bg-dark" type="button" data-toggle="collapse" data-target="#searchBar" aria="searchBar" aria-expanded="false" aria-label="Toggle Search">
+                <img src="static/searchIcon.png" alt="Search Icon"/>
+            </button>
+            <button class="accountButton bg-dark" type="button" aria="accountButton" aria-expanded="false" aria-label="Account Button">
+                <img src="static/account.png" alt="Account Icon"/>
+            </button>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        
+        
+        <!--- Menu Content --->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Dashboard <img alt="Dashboard Image" src="https://img.icons8.com/android/24/ffffff/cottage.png"/></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="faculties">Faculties <img alt="Faculties Image" src="https://img.icons8.com/ios-glyphs/30/ffffff/education.png"/></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#Help">Help <img alt="Help Image" src="https://img.icons8.com/material-sharp/24/ffffff/help.png"/></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.uea.ac.uk/about/campus-map" target="_blank">Map <img alt="Map Image" src="https://img.icons8.com/android/24/ffffff/map.png"/></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="news">News <img alt="News Image" src="https://img.icons8.com/android/24/ffffff/news.png"/></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#Support">Support <img alt="Support Image" src="https://img.icons8.com/fluent-systems-filled/24/ffffff/online-support.png"/></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="systems">UEA Systems <img alt="Systems Image" src="https://img.icons8.com/metro/26/ffffff/system-task.png"/></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main role="main">
+
+
+    <div class="container-fluid bg-light sectionTitle">
+            <h2>Search</h2>
+    </div>
+    <div class="container-md">
+        <div class="input-group input-group-lg align-items-center">
+            <input type="text" id="NewsSearch" class="form-control" placeholder="Search..." aria-label="SearchBar" />
+            <div class="input-group-button">
+                <button type="button" data-toggle="collapse" alt="FilterButton" data-target="#FilterPopOut" aria-expanded="false" aria-controls="FilterPopOut" aria-label="FilterIcon">
+                    <img src="https://img.icons8.com/material-outlined/24/000000/filter--v1.png" alt="FilterIcon"/>
+                </button>
+            </div>
+            <div class="input-group-button">
+                <a href="search">
+                <button type="button" alt="SearchButton" aria-expanded="false" aria-label="SearchIcon" >
+                    <img src="https://img.icons8.com/material-two-tone/24/000000/search.png" alt="SearchIcon"/>
+                </button>
+                </a>
+            </div>  
+        </div>
+        <div class="collapse container-md bg-light" id="FilterPopOut">
+            <div class="row">
+                <div class="form-check form-check-inline mr-5">
+                  <input class="form-check-input" type="checkbox" id="newsFilter" value="news">
+                  <label class="form-check-label" for="newsFilter">News</label>
+                </div>
+                <div class="form-check form-check-inline mr-5">
+                  <input class="form-check-input" type="checkbox" id="pagesFilter" value="pages">
+                  <label class="form-check-label" for="pagesFilter">Pages</label>
+                </div>
+                <div class="form-check form-check-inline mr-5">
+                  <input class="form-check-input" type="checkbox" id="peopleFilter" value="people">
+                  <label class="form-check-label" for="peopleFilter">People</label>
+                </div>
+                <div class="form-check form-check-inline mr-5">
+                  <input class="form-check-input" type="checkbox" id="allFilter" value="all">
+                  <label class="form-check-label" for="allFilter">All</label>
+                </div>
+            </div>
+        </div>
+        <label for="Search">Search for something specific</label>
+    </div>
+    <div class="container-md bg-light">
+        <h2>News</h2>
+        
+        <div class="album py-5 bg-light">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-3 d-flex align-items-stretch">
+                  <div class="card mb-3 box-shadow">
+                    <img src="static/news1.jpg" class="card-img-top" alt="News Image 1">
+                    <div class="card-body d-flex flex-column">
+                      <strong class="card-title">Covid-19 Update</strong>
+                      <div class="d-flex justify-content-between align-items-center mt-auto">
+                        <div class="btn-group">
+                          <a href="article">
+                          <button type="button" class="btn btn-sm btn-outline-secondary">Read More</button>
+                          </a>
+                        </div>
+                        <small class="text-muted">December 1st 2020</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3 d-flex align-items-stretch">
+                  <div class="card mb-3 box-shadow">
+                    <img src="static/news2.jpg" class="card-img-top" alt="News Image 2">
+                    <div class="card-body d-flex flex-column">
+                      <strong class="card-title">Tier 2 - What does it mean?</strong>
+                      <div class="d-flex justify-content-between align-items-center mt-auto">
+                        <a href="article">
+                          <button type="button" class="btn btn-sm btn-outline-secondary">Read More</button>
+                        </a>
+                        <small class="text-muted">December 1st 2020</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3 d-flex align-items-stretch">
+                  <div class="card mb-3 box-shadow">
+                    <img src="static/news3.jpg" class="card-img-top" alt="News Image 3">
+                    <div class="card-body d-flex flex-column">
+                      <strong class="card-title">Homeworking Support</strong>
+                      <div class="d-flex justify-content-between align-items-center mt-auto">
+                        <div class="btn-group">
+                          <a href="article">
+                          <button type="button" class="btn btn-sm btn-outline-secondary">Read More</button>
+                          </a>
+                        </div>
+                        <small class="text-muted">November 29th 2020</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3 d-flex align-items-stretch">
+                  <div class="card mb-3 box-shadow">
+                    <img src="static/Victory.jpg" class="card-img-top" alt="News Image 4">
+                    <div class="card-body d-flex flex-column">
+                      <strong class="card-title">UEA Team victory  at Social Storm 2020</strong>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <a href="article">
+                          <button type="button" class="btn btn-sm btn-outline-secondary">Read More</button>
+                          </a>
+                        </div>
+                        <small class="text-muted">November 28th 2020</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center">
+            <button class="btn btn-primary bg-light shadow-none" type="button" data-toggle="collapse" onclick="changeImage()" alt="Dropdown Button" data-target="#moreNewsToggle" aria-expanded="false" aria-controls="moreNewsToggle">
+                <img id="dropImage" src="static/dropDown.png" alt="Dropdown Image"/>
+            </button>
+        </div>
+        
+        <div class="collapse album py-5 bg-light" id="moreNewsToggle">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-3 d-flex align-items-stretch">
+                  <div class="card mb-3 box-shadow">
+                    <img src="static/news1.jpg" class="card-img-top" alt="News Image 5">
+                    <div class="card-body d-flex flex-column">
+                      <strong class="card-title">Covid-19 Update</strong>
+                      <div class="d-flex justify-content-between align-items-center mt-auto">
+                        <div class="btn-group">
+                          <a href="article">
+                          <button type="button" class="btn btn-sm btn-outline-secondary">Read More</button>
+                          </a>
+                        </div>
+                        <small class="text-muted">December 1st 2020</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3 d-flex align-items-stretch">
+                  <div class="card mb-3 box-shadow">
+                    <img src="static/news2.jpg" class="card-img-top" alt="News Image 6">
+                    <div class="card-body d-flex flex-column">
+                      <strong class="card-title">Tier 2 - What does it mean?</strong>
+                      <div class="d-flex justify-content-between align-items-center mt-auto">
+                        <a href="article">
+                          <button type="button" class="btn btn-sm btn-outline-secondary">Read More</button>
+                        </a>
+                        <small class="text-muted">December 1st 2020</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3 d-flex align-items-stretch">
+                  <div class="card mb-3 box-shadow">
+                    <img src="static/news3.jpg" class="card-img-top" alt="News Image 7">
+                    <div class="card-body d-flex flex-column">
+                      <strong class="card-title">Homeworking Support</strong>
+                      <div class="d-flex justify-content-between align-items-center mt-auto">
+                        <div class="btn-group">
+                          <a href="article">
+                          <button type="button" class="btn btn-sm btn-outline-secondary">Read More</button>
+                          </a>
+                        </div>
+                        <small class="text-muted">November 29th 2020</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3 d-flex align-items-stretch">
+                  <div class="card mb-3 box-shadow">
+                    <img src="static/Victory.jpg" class="card-img-top" alt="News Image 8">
+                    <div class="card-body d-flex flex-column">
+                      <strong class="card-title">UEA Team victory  at Social Storm 2020</strong>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <a href="article">
+                          <button type="button" class="btn btn-sm btn-outline-secondary">Read More</button>
+                          </a>
+                        </div>
+                        <small class="text-muted">November 28th 2020</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+    <div>
+    
+    <div class="container-md bg-light">
+        <h2>People</h2>
+        
+        <div class="album py-5 bg-light">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-3 d-flex align-items-stretch">
+                  <div class="card md-3 box-shadow">
+                    <img src="static/Debbie.jpg" class="card-img-top peopleImage" alt="People Image 1">
+                    <div class="card-body d-flex flex-column">
+                      <strong class="card-title">Miss Debbie Taylor</strong>
+                      <div class="d-flex justify-content-between align-items-center mt-auto">
+                        <div class="btn-group">
+                          <a class="btn btn-outline-dark btn-outline-dark btn-light" href="https://people.uea.ac.uk/debbie_taylor" target="_blank">Go <img src="https://img.icons8.com/fluent-systems-filled/24/000000/external-link.png" alt="Redirect image"></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 d-flex align-items-stretch">
+                  <div class="card md-3 box-shadow">
+                    <img src="static/Dan.jpg" class="card-img-top peopleImage" alt="People Image 2">
+                    <div class="card-body d-flex flex-column">
+                      <strong class="card-title">Dr Dan Smith</strong>
+                      <div class="d-flex justify-content-between align-items-center mt-auto">
+                        <div class="btn-group">
+                          <a class="btn btn-outline-dark btn-outline-dark btn-light" href="https://people.uea.ac.uk/dan_smith" target="_blank">Go <img src="https://img.icons8.com/fluent-systems-filled/24/000000/external-link.png" alt="Redirect image"></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 d-flex align-items-stretch">
+                  <div class="card md-3 box-shadow">
+                    <img src="static/Blank.png" class="card-img-top peopleImage" alt="People Image 3">
+                    <div class="card-body d-flex flex-column">
+                      <strong class="card-title">Mr Andy Davies</strong>
+                      <div class="d-flex justify-content-between align-items-center mt-auto">
+                        <div class="btn-group">
+                          <a class="btn btn-outline-dark btn-outline-dark btn-light" href="https://people.uea.ac.uk/andy_davies" target="_blank">Go <img src="https://img.icons8.com/fluent-systems-filled/24/000000/external-link.png" alt="Redirect image"></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 d-flex align-items-stretch">
+                  <div class="card md-3 box-shadow">
+                    <img src="static/Hane.bmp" class="card-img-top peopleImage" alt="People Image 4">
+                    <div class="card-body d-flex flex-column">
+                      <strong class="card-title">Dr Min Aung</strong>
+                      <div class="d-flex justify-content-between align-items-center mt-auto">
+                        <div class="btn-group">
+                          <a class="btn btn-outline-dark btn-outline-dark btn-light" href="https://people.uea.ac.uk/min_aung" target="_blank">Go <img src="https://img.icons8.com/fluent-systems-filled/24/000000/external-link.png" alt="Redirect image"></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center">
+            <button class="btn btn-primary bg-light shadow-none" type="button" data-toggle="collapse" onclick="changeImage()" alt="Dropdown Button" data-target="#morePeopleToggle" aria-expanded="false" aria-controls="morePeopleToggle">
+                <img id="dropImage" src="static/dropDown.png" alt="Dropdown Image"/>
+            </button>
+        </div>
+        
+        <div class=" collapse album py-5 bg-light" id="morePeopleToggle">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-3 d-flex align-items-stretch">
+                  <div class="card md-3 box-shadow">
+                    <img src="static/Debbie.jpg" class="card-img-top peopleImage" alt="People Image 1">
+                    <div class="card-body d-flex flex-column">
+                      <strong class="card-title">Miss Debbie Taylor</strong>
+                      <div class="d-flex justify-content-between align-items-center mt-auto">
+                        <div class="btn-group">
+                          <a class="btn btn-outline-dark btn-outline-dark btn-light" href="https://people.uea.ac.uk/debbie_taylor" target="_blank">Go <img src="https://img.icons8.com/fluent-systems-filled/24/000000/external-link.png" alt="Redirect image"></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 d-flex align-items-stretch">
+                  <div class="card md-3 box-shadow">
+                    <img src="static/Dan.jpg" class="card-img-top peopleImage" alt="People Image 2">
+                    <div class="card-body d-flex flex-column">
+                      <strong class="card-title">Dr Dan Smith</strong>
+                      <div class="d-flex justify-content-between align-items-center mt-auto">
+                        <div class="btn-group">
+                          <a class="btn btn-outline-dark btn-outline-dark btn-light" href="https://people.uea.ac.uk/dan_smith" target="_blank">Go <img src="https://img.icons8.com/fluent-systems-filled/24/000000/external-link.png" alt="Redirect image"></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 d-flex align-items-stretch">
+                  <div class="card md-3 box-shadow">
+                    <img src="static/Blank.png" class="card-img-top peopleImage" alt="People Image 3">
+                    <div class="card-body d-flex flex-column">
+                      <strong class="card-title">Mr Andy Davies</strong>
+                      <div class="d-flex justify-content-between align-items-center mt-auto">
+                        <div class="btn-group">
+                          <a class="btn btn-outline-dark btn-outline-dark btn-light" href="https://people.uea.ac.uk/andy_davies" target="_blank">Go <img src="https://img.icons8.com/fluent-systems-filled/24/000000/external-link.png" alt="Redirect image"></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 d-flex align-items-stretch">
+                  <div class="card md-3 box-shadow">
+                    <img src="static/Hane.bmp" class="card-img-top peopleImage" alt="People Image 4">
+                    <div class="card-body d-flex flex-column">
+                      <strong class="card-title">Dr Min Aung</strong>
+                      <div class="d-flex justify-content-between align-items-center mt-auto">
+                        <div class="btn-group">
+                          <a class="btn btn-outline-dark btn-outline-dark btn-light" href="https://people.uea.ac.uk/min_aung" target="_blank">Go <img src="https://img.icons8.com/fluent-systems-filled/24/000000/external-link.png" alt="Redirect image"></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+        
+    <div>
+
+
+    
+
+    </main>
+    
+    
+    <!-- Footer -->
+    <footer class="page-footer font-small bg-dark">
+      <p style="color:white; text-align:center"> © UEA. All rights reserved. University of East Anglia, Norwich Research Park, Norwich, Norfolk, NR4 7TJ, UK | +44 (0) 1603 456161 </p>
+      <div class="container text-center">
+        <!-- Grid row -->
+        <div class="row">
+          <!-- Grid columns -->
+          <div class="col-md-6 mx-auto">
+            <a href="https://beta.uea.ac.uk/about/university-information/statutory-and-legal/website" target="_blank" class="text-light">Accessibility/Cookie Policy</a>
+          <div class="col-md-6 mx-auto">
+            <a href="https://beta.uea.ac.uk/about/university-information/statutory-legal-policies" target="_blank" class="text-light">Legal Statements</a>
+          </div>
+          <div class="col-md-6 mx-auto">
+            <a href="https://beta.uea.ac.uk/about/university-information/statutory-legal-policies/modern-slavery-statement" target="_blank" class="text-light">Statement on Modern Slavery</a>
+          </div>
+          <div class="col-md-6 mx-auto">
+            <a href="https://beta.uea.ac.uk/about/university-information/statutory-and-legal/data-protection" target="_blank" class="text-light">Data Protection</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script language="javascript">
+        function changeImage() {
+            var image = document.getElementById('dropImage');
+            if(image.src.match("static/dropDown.png")){
+                image.src = "static/dropUp.png";
+            }
+            else{
+                image.src = "static/dropDown.png";
+            }
+        }
+    </script>
+  </body>
+</html>
