@@ -5,10 +5,8 @@ Table of contents
 
 * [Introduction](#introduction)
 * [Installation](#installation)
-* [Usage](#usage)
 * [Known issues and limitations](#known-issues-and-limitations)
 * [Authors and history](#authors-and-history)
-* [Acknowledgments](#acknowledgments)
 
 
 Introduction
@@ -39,6 +37,7 @@ After installing the required dependencies, the prototype can be ran locally by 
 python .\server.py
 ```
 4. Navigate to http://127.0.0.1:5000/
+
 
 Known issues and limitations
 ----------------------------
