@@ -11,8 +11,7 @@ Table of contents
 
 Introduction
 ------------
-This project was completed as the second piece of coursework for the module "Human Computer Interaction" during the third year of my studies at The University of East Anglia. In this project I worked with another student to create a prototype redesign of our University Portal Website, with a focus on design, usability, and accessibility of the website. In particular, we aimed to satisfy Nielsen's 10 principles of User Interface Design (https://www.nngroup.com/articles/ten-usability-heuristics/)
-It was developed using a HTML 5, CSS, JavaScript stack alongside a Python Flask local server. 
+This project was completed as the second piece of coursework for the module "Human Computer Interaction" during the third year of my studies at The University of East Anglia. In this project I worked with another student to create a prototype redesign of our University Portal Website, with a focus on design, usability, and accessibility of the website. In particular, we aimed to satisfy Nielsen's 10 principles of User Interface Design (https://www.nngroup.com/articles/ten-usability-heuristics/). It was developed using a HTML 5, CSS, JavaScript stack alongside a Python Flask local server. 
 
 
 Installation
